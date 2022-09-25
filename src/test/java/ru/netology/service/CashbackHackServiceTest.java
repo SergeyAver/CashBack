@@ -19,6 +19,6 @@ public class CashbackHackServiceTest {
 
     @Test
     public void shouldProposeOnethousand() {
-        assertEquals(1000, service.remain(1000));
+        assertEquals(0, service.remain(1000));
     }
 }
