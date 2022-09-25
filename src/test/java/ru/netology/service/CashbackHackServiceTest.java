@@ -1,24 +1,24 @@
 package ru.netology.service;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.*;
 
-public class CashbackHackServiceTest {
+public class CashbackHackServiceTest{
     CashbackHackService service = new CashbackHackService();
 
     @Test
     public void shouldProposeOne() {
-        assertEquals(1, service.remain(999));
+        assertEquals(service.remain(999),1);
     }
 
     @Test
     public void shouldProposeFiveHundred() {
-        assertEquals(500, service.remain(1500));
+        assertEquals(service.remain(1500),500);
     }
 
     @Test
     public void shouldProposeOnethousand() {
-        assertEquals(1000, service.remain(1000));
+        assertEquals(service.remain(1000), 1000);
     }
 }
